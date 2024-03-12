@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Registro de equipos deportivos</title>
+</head>
+<header>
+    <h1>Equipos deportivos
+        “Eduardo Toapanta”</h1>
+</header>
+
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center">Registre un nuevo equipo deportivo</h1>
+        <form action="añadir.php" method="post" class="w-50 mx-auto" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="cod_equipo" class="form-label">Codigo:</label>
+                <input type="text" class="form-control" id="cod_equipo" name="cod_equipo" required>
+            </div>
+            <div class="mb-3">
+                <label for="nom_equipo" class="form-label">Nombre del equipo:</label>
+                <input type="text" class="form-control" id="nom_equipo" name="nom_equipo" required>
+            </div>
+            <div class="mb-3">
+                <label for="existencias" class="form-label">Existencias:</label>
+                <input type="number" class="form-control" id="existencias" name="existencias" required>
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio:</label>
+                <input type="number" class="form-control" id="precio" step="0.01" name="precio" required>
+            </div>
+            <div class="mb-3">
+                <label for="cod_categoria" class="form-label">Categoria:</label>
+                <select class="form-control" name="cod_categoria" id="cod_categoria">
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Camisa">Camisa</option>
+                    <option value="Pantaloneta">Pantaloneta</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen de muestra:</label>
+                <input type="file" class="form-control" id="imagen" name="imagen" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Añadir</button>
+        </form>
+    </div>
+</body>
+
+</html>
